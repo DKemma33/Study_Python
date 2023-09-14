@@ -1,0 +1,13 @@
+# 비교 연산자
+print(10 == 11)
+
+check = 10 > 11
+print(check)
+
+print(10 > 9 and 10 == 11)
+print(10 > 9 or 10 == 11)
+
+condition1 = 10 > 9
+condition2 = 10 == 11
+
+print(not(condition1 and condition2))

@@ -1,0 +1,20 @@
+제너레이터(Generator)
+    한 번에 하나씩 구성요소를 반환해주는 객체
+    대용량 데이터 및 많은 반복이 필요한 코드에서 메모리를 적게 사용할 수 있는 고성능 방법
+    필요할 때마다 하나씩만 가져오기 때문에 무거운 객체를 다룰 때 사용한다.
+
+# list comprehension
+[operate for varibale in range(end)]
+
+# generator expression(comprehension)
+(operate for varibale in range(end))
+
+함수 내에서 return 대신 yield 키워드를 사용하여 next() 실행 시 하나씩 리턴하도록 설계한다.
+
+def test(count=0):
+    while True:
+        yield count
+        count += 1
+
+count = test(10)
+next(count)
